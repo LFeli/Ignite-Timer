@@ -34,7 +34,9 @@ export function History() {
                 Há cerca de 2 minutos atrás
               </td>
               <td className="bg-gray-700 border-t-4 border-gray-800 p-4 text-sm leading-relaxed pr-6">
-                Concluído
+                <span className="flex items-center gap-4 before:content-normal w-2 h-2 rounded-full bg-yellow-500">
+                  Concluído
+                </span>
               </td>
             </tr>
             <tr>
@@ -48,7 +50,9 @@ export function History() {
                 Há cerca de 2 minutos atrás
               </td>
               <td className="bg-gray-700 border-t-4 border-gray-800 p-4 text-sm leading-relaxed pr-6">
-                Concluído
+                <span className="flex items-center gap-4 before:content-normal w-2 h-2 rounded-full bg-yellow-500">
+                  Concluído
+                </span>
               </td>
             </tr>
             <tr>
@@ -62,7 +66,9 @@ export function History() {
                 Há cerca de 2 minutos atrás
               </td>
               <td className="bg-gray-700 border-t-4 border-gray-800 p-4 text-sm leading-relaxed pr-6">
-                Concluído
+                <span className="flex items-center gap-4 before:content-normal w-2 h-2 rounded-full bg-yellow-500">
+                  Concluído
+                </span>
               </td>
             </tr>
             <tr>
@@ -75,8 +81,10 @@ export function History() {
               <td className="bg-gray-700 border-t-4 border-gray-800 p-4 text-sm leading-relaxed">
                 Há cerca de 2 minutos atrás
               </td>
-              <td className="bg-gray-700 border-t-4 border-gray-800 p-4 text-sm leading-relaxed pr-6">
-                Concluído
+              <td className="bg-gray-700 border-t-4 border-gray-800 px-4 pl-4 pr-24 text-sm leading-relaxed">
+                <span className="flex items-center gap-4 before:content-normal w-2 h-2 rounded-full bg-yellow-500">
+                  Concluído
+                </span>
               </td>
             </tr>
           </tbody>
