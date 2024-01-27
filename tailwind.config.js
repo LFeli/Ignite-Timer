@@ -93,7 +93,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       height: {
-        'LayoutContainer': 'calc(100vh - 10rem)'
+        'LayoutContainerMobile': 'calc(100vh - 5%)',
+        'LayoutContainerTablet': 'calc(100vh - 10%)',
+        'LayoutContainer': 'calc(100vh - 10rem)',
       },
     },
   },
