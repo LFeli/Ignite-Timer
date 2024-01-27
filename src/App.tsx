@@ -3,7 +3,7 @@ import { Router } from './Router'
 
 export function App() {
   return (
-    <main className="h-screen w-screen pt-[1px] bg-gray-900 text-gray-300">
+    <main className="h-screen w-full px-4 md:px-8 rounded-lg bg-gray-900 text-gray-300 flex items-center justify-center">
       <BrowserRouter>
         <Router />
       </BrowserRouter>
