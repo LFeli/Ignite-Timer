@@ -8,14 +8,24 @@ export function Home() {
           <label htmlFor="task">Vou trabalhar em</label>
           <input
             type="text"
+            list="task-sugestions"
             id="task"
             placeholder="Dê um nome para o seu projeto"
             className="bg-transparent h-10 border-b-2 border-b-gray-500 font-bold text-lg px-2 text-gray-100 flex-1  placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none"
           />
 
+          <datalist className="mt-10" id="task-sugestions">
+            <option value="projeto 1" />
+            <option value="projeto 2" />
+            <option value="projeto 3" />
+          </datalist>
+
           <label htmlFor="minutesAmount">Durante</label>
           <input
             type="number"
+            step={5}
+            min={5}
+            max={60}
             id="minutesAmount"
             placeholder="00"
             className="bg-transparent h-10 border-b-2 border-b-gray-500 font-bold text-lg px-2 text-gray-100 w-16 placeholder:text-gray-500 focus:outline-none focus:border-b-green-500"
