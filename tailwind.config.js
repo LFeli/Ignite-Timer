@@ -70,6 +70,9 @@ module.exports = {
 
         'yellow-500': '#FBA94C',
       },
+      fontFamily: {
+        'robotoMono' : ['Roboto Mono', 'monospace']
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
