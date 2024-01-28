@@ -53,6 +53,7 @@ module.exports = {
         },
 
         'gray-100': '#E1E1E6',
+        'gray-250': '#DAE6E2',
         'gray-300': '#C4C4CC',
         'gray-400': '#8D8D99',
         'gray-500': '#7C7C8A',
@@ -98,6 +99,9 @@ module.exports = {
         'LayoutContainerTablet': 'calc(100vh - 10%)',
         'LayoutContainer': 'calc(100vh - 10rem)',
       },
+      screens: {
+        "2mb" : '500px',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
