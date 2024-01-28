@@ -6,7 +6,32 @@ export function Home() {
     <main className=" flex flex-col flex-1 items-center justify-center">
       <div className="w-full max-w-2xl">
         <form className="flex flex-col items-center gap-14">
-          <p>Form</p>
+          <div className="w-full flex flex-col md:flex-row gap-10 md:gap-6 font-bold md:text-lg">
+            <div className="flex md:flex-1 gap-2">
+              <label htmlFor="task">Vou trabalhar em</label>
+              <input
+                type="text"
+                id="tasks"
+                placeholder="Dê um nome ao seu projeto"
+                className=" flex-1 w-full px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none"
+              />
+            </div>
+
+            <div className="flex gap-2">
+              <label htmlFor="minutesAmount">Durante</label>
+              <input
+                type="number"
+                step={5}
+                min={5}
+                max={60}
+                id="minutesAmount"
+                placeholder="00"
+                className="px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none"
+              />
+
+              <span>minutos</span>
+            </div>
+          </div>
 
           <div className="w-full flex items-center justify-between font-robotoMono text-4xl 2mb:text-8xl md:text-[8rem] leading-relaxed  text-gray-600 dark:text-gray-100 select-none">
             <div className="flex flex-1 gap-3 md:gap-4">
