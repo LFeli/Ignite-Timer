@@ -18,22 +18,18 @@ export function Header() {
           <ModeToggle />
         </div>
 
-        <div className="flex items-center justify-center gap-3 text-gray-500">
+        <div className="flex items-center justify-center gap-3 text-gray-800 dark:text-gray-500">
           <HoverCard openDelay={600} closeDelay={150}>
             <HoverCardTrigger>
               {' '}
               <NavLink
                 to="/"
-                className="w-12 h-12 flex items-center justify-center border-b-[3px] border-t-[3px] border-transparent rounded-t hover:border-b-green-500 hover:bg-zinc-800 transition-colors duration-150 aria-[current='page']:border-b-green-500 aria-[current='page']:text-green-500"
+                className="w-12 h-12 flex items-center justify-center border-b-[3px] border-t-[3px] border-transparent rounded-t hover:border-b-green-500 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors duration-150 aria-[current='page']:border-b-green-500 aria-[current='page']:text-green-500"
               >
                 <Timer size={28} />
               </NavLink>
             </HoverCardTrigger>
-            <HoverCardContent
-              side="top"
-              sideOffset={15}
-              className="bg-zinc-950 text-gray-200 text border-none"
-            >
+            <HoverCardContent side="top" sideOffset={15}>
               Timer
               <HoverCardArrow className="fill-zinc-950" />
             </HoverCardContent>
@@ -44,16 +40,12 @@ export function Header() {
               {' '}
               <NavLink
                 to="/history"
-                className="w-12 h-12 flex items-center justify-center border-b-[3px] border-t-[3px] border-transparent rounded-t hover:border-b-green-500 hover:bg-zinc-800 transition-colors duration-150 aria-[current='page']:border-b-green-500 aria-[current='page']:text-green-500"
+                className="w-12 h-12 flex items-center justify-center border-b-[3px] border-t-[3px] border-transparent rounded-t hover:border-b-green-500 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors duration-150 aria-[current='page']:border-b-green-500 aria-[current='page']:text-green-500"
               >
                 <History size={28} />
               </NavLink>
             </HoverCardTrigger>
-            <HoverCardContent
-              side="top"
-              sideOffset={15}
-              className="bg-zinc-950 text-gray-200 text border-none"
-            >
+            <HoverCardContent side="top" sideOffset={15}>
               Histórico
               <HoverCardArrow className="fill-zinc-950" />
             </HoverCardContent>
