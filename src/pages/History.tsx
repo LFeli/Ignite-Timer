@@ -15,7 +15,7 @@ export function History() {
       </h1>
 
       <Table className="overflow-hidden flex-1">
-        <TableHeader className="">
+        <TableHeader>
           <TableRow className="bg-gray-200 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600">
             <TableHead>Tarefas</TableHead>
             <TableHead>Duração</TableHead>
