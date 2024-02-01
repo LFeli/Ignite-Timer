@@ -1,3 +1,4 @@
+import { Status } from '@/components/Status'
 import {
   Table,
   TableBody,
@@ -25,136 +26,224 @@ export function History() {
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="inProgress">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="suspended">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell>$250.00</TableCell>
+            <TableCell className="min-w-52">
+              Conserto de débitos técnicos
+            </TableCell>
+            <TableCell>25 minutos</TableCell>
+            <TableCell>Há cerca de 2 meses</TableCell>
+            <TableCell>
+              <Status statusColor="completed">Completado</Status>
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>
