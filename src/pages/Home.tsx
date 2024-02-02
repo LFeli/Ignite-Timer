@@ -1,9 +1,21 @@
 import { Button } from '@/components/ui/button'
 import { Play } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as zod from 'zod'
+
+const newCycleFormSchema = zod.object({
+  task: zod.string().min(1, 'Informe a tarefa'),
+  minutesAmount: zod
+    .number()
+    .min(5, 'O ciclo mínimo precisa ser de pelo menos 5 minutos')
+    .max(60, 'O intervalo precisa ser de no máximo 60 minutos'),
+})
 
 export function Home() {
-  const { register, handleSubmit, watch } = useForm()
+  const { register, handleSubmit, watch, formState } = useForm({
+    resolver: zodResolver(newCycleFormSchema),
+  })
 
   const task = watch('task')
   const isSubmitDisabled = !task
@@ -11,6 +23,8 @@ export function Home() {
   function handleCreateNewCycle(data) {
     console.log(data)
   }
+
+  console.log(formState.errors)
 
   return (
     <main className=" flex flex-col flex-1 items-center justify-center">
@@ -40,7 +54,7 @@ export function Home() {
                 max={60}
                 id="minutesAmount"
                 placeholder="00"
-                {...register('minutesAmount')}
+                {...register('minutesAmount', { valueAsNumber: true })}
                 className="px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none"
               />
 
