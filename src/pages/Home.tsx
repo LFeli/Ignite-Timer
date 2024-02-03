@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Play } from 'lucide-react'
+import { Play, X } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
@@ -21,6 +21,7 @@ interface Cycle {
   task: string
   minutesAmount: number
   startDate: Date
+  interruptedDate?: Date
 }
 
 export function Home() {
@@ -70,6 +71,20 @@ export function Home() {
     reset()
   }
 
+  function handleInterruptCycle() {
+    setCycles(
+      cycles.map((cycle) => {
+        if (cycle.id === activeCycleID) {
+          return { ...cycle, interruptedDate: new Date() }
+        } else {
+          return cycle
+        }
+      }),
+    )
+
+    setActiveCycleID(null)
+  }
+
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
 
@@ -82,6 +97,8 @@ export function Home() {
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds}`
+    } else {
+      document.title = 'Ignite Timer'
     }
   }, [minutes, seconds, activeCycle])
 
@@ -102,8 +119,9 @@ export function Home() {
                 type="text"
                 id="task"
                 placeholder="Dê um nome ao seu projeto"
+                disabled={!!activeCycle}
                 {...register('task')}
-                className=" flex-1 w-full px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none"
+                className=" flex-1 w-full px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
 
@@ -116,8 +134,9 @@ export function Home() {
                 max={60}
                 id="minutesAmount"
                 placeholder="00"
+                disabled={!!activeCycle}
                 {...register('minutesAmount', { valueAsNumber: true })}
-                className="px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none"
+                className="px-2 pb-2 bg-transparent text-gray-500 dark:text-gray-100 border-b-2 border-b-gray-500 placeholder:text-gray-500 focus:border-b-green-500 focus:outline-none disabled:opacity-50 cursor-not-allowed"
               />
 
               <span>minutos</span>
@@ -148,13 +167,25 @@ export function Home() {
             </div>
           </div>
 
-          <Button
-            className="w-full flex-1 py-3 md:py-4 bg-green-500 hover:bg-green-700 disabled:bg-green-500 text-gray-100"
-            disabled={isSubmitDisabled}
-          >
-            <Play size={24} />
-            Começar
-          </Button>
+          {activeCycle ? (
+            <Button
+              className="w-full flex-1 gap-2 py-3 md:py-4 bg-red-500 hover:bg-red-700 text-gray-100"
+              type="button"
+              onClick={handleInterruptCycle}
+            >
+              <X size={24} />
+              Interromper
+            </Button>
+          ) : (
+            <Button
+              className="w-full flex-1 gap-1 py-3 md:py-4 bg-green-500 hover:bg-green-700 disabled:bg-green-500 text-gray-100"
+              type="submit"
+              disabled={isSubmitDisabled}
+            >
+              <Play size={24} />
+              Começar
+            </Button>
+          )}
         </form>
       </div>
     </main>
