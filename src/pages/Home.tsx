@@ -3,6 +3,7 @@ import { Play } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
+import { useState } from 'react'
 
 const newCycleFormSchema = zod.object({
   task: zod.string().min(1, 'Informe a tarefa'),
@@ -14,25 +15,43 @@ const newCycleFormSchema = zod.object({
 
 type NewCycleFormData = zod.infer<typeof newCycleFormSchema>
 
+interface Cycle {
+  id: string
+  task: string
+  minutesAmount: number
+}
+
 export function Home() {
-  const { register, handleSubmit, watch, reset, formState } =
-    useForm<NewCycleFormData>({
-      resolver: zodResolver(newCycleFormSchema),
-      defaultValues: {
-        task: '',
-        minutesAmount: 0,
-      },
-    })
+  const [cycles, setCycles] = useState<Cycle[]>([])
+  const [activeCycleID, setActiveCycleID] = useState<string | null>(null)
+
+  const { register, handleSubmit, watch, reset } = useForm<NewCycleFormData>({
+    resolver: zodResolver(newCycleFormSchema),
+    defaultValues: {
+      task: '',
+      minutesAmount: 0,
+    },
+  })
 
   const task = watch('task')
   const isSubmitDisabled = !task
 
   function handleCreateNewCycle(data: NewCycleFormData) {
-    console.log(data)
+    const id = String(new Date().getTime())
+    const newCycle: Cycle = {
+      id,
+      task: data.task,
+      minutesAmount: data.minutesAmount,
+    }
+
+    setCycles((state) => [...state, newCycle])
+    setActiveCycleID(id)
+
     reset()
   }
 
-  console.log(formState.errors)
+  const activeCycle = cycles.find((cycle) => cycle.id === activeCycleID)
+  console.log(activeCycle)
 
   return (
     <main className=" flex flex-col flex-1 items-center justify-center">
