@@ -7,13 +7,19 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { CyclesContext } from '@/context/CyclesContext'
+import { useContext } from 'react'
 
 export function History() {
+  const { cycles } = useContext(CyclesContext)
+
   return (
     <main className="flex flex-1 flex-col gap-8">
       <h1 className="text-lg md:text-2xl dark:text-gray-100 font-bold pt-10">
         Meu histórico
       </h1>
+
+      <pre>{JSON.stringify(cycles, null, 2)}</pre>
 
       <Table className="overflow-hidden flex-1">
         <TableHeader>

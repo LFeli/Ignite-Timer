@@ -1,5 +1,5 @@
+import { CyclesContext } from '@/context/CyclesContext'
 import { useContext } from 'react'
-import { CyclesContext } from '@/pages/Home'
 import { useFormContext } from 'react-hook-form'
 
 export function CycleForm() {

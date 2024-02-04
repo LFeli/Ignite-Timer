@@ -1,4 +1,4 @@
-import { CyclesContext } from '@/pages/Home'
+import { CyclesContext } from '@/context/CyclesContext'
 import { differenceInSeconds } from 'date-fns'
 import { useContext, useEffect } from 'react'
 
