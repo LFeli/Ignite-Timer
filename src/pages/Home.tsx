@@ -29,7 +29,12 @@ export function Home() {
       minutesAmount: 0,
     },
   })
-  const { handleSubmit, watch /* reset */ } = newCycleForm
+  const { handleSubmit, watch, reset } = newCycleForm
+
+  function handleCreateNewCycle(data: NewCycleFormData) {
+    createNewCycle(data)
+    reset()
+  }
 
   const task = watch('task')
   const isSubmitDisabled = !task
@@ -38,7 +43,7 @@ export function Home() {
     <main className=" flex flex-col flex-1 items-center justify-center">
       <div className="w-full max-w-2xl">
         <form
-          onSubmit={handleSubmit(createNewCycle)}
+          onSubmit={handleSubmit(handleCreateNewCycle)}
           className="flex flex-col items-center gap-14"
         >
           <FormProvider {...newCycleForm}>
