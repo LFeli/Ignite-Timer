@@ -9,6 +9,8 @@ import {
 } from '@/components/ui/table'
 import { CyclesContext } from '@/context/CyclesContext'
 import { useContext } from 'react'
+import { formatDistanceToNow } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
 export function History() {
   const { cycles } = useContext(CyclesContext)
@@ -18,8 +20,6 @@ export function History() {
       <h1 className="text-lg md:text-2xl dark:text-gray-100 font-bold pt-10">
         Meu histórico
       </h1>
-
-      <pre>{JSON.stringify(cycles, null, 2)}</pre>
 
       <Table className="overflow-hidden flex-1">
         <TableHeader>
@@ -31,226 +31,33 @@ export function History() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="inProgress">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="suspended">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="min-w-52">
-              Conserto de débitos técnicos
-            </TableCell>
-            <TableCell>25 minutos</TableCell>
-            <TableCell>Há cerca de 2 meses</TableCell>
-            <TableCell>
-              <Status statusColor="completed">Completado</Status>
-            </TableCell>
-          </TableRow>
+          {cycles.map((cycle) => {
+            return (
+              <TableRow key={cycle.id}>
+                <TableCell className="min-w-52">{cycle.task}</TableCell>
+                <TableCell>{cycle.minutesAmount} minutos</TableCell>
+                <TableCell>
+                  {formatDistanceToNow(cycle.startDate, {
+                    addSuffix: true,
+                    locale: ptBR,
+                  })}
+                </TableCell>
+                <TableCell>
+                  {cycle.finishedDate && (
+                    <Status statusColor="completed">Completado</Status>
+                  )}
+
+                  {cycle.interruptedDate && (
+                    <Status statusColor="suspended">Interrompido</Status>
+                  )}
+
+                  {!cycle.finishedDate && !cycle.interruptedDate && (
+                    <Status statusColor="inProgress">Em progresso</Status>
+                  )}
+                </TableCell>
+              </TableRow>
+            )
+          })}
         </TableBody>
       </Table>
     </main>
