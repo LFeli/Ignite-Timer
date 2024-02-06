@@ -1,30 +1,54 @@
-# React + TypeScript + Vite
+# Ignite Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Segundo projeto da trilha ReactJS Ignite da [Rocketseat](https://www.rocketseat.com.br/). O Ignite Timer e um projeto de um contador focado em melhorar a sua produtividade, permitindo que acompanhe o tempo de suas tarefas / projetos através de ciclos.
 
-Currently, two official plugins are available:
+O projeto inicialmente feito com algumas certas tecnologias, porém está e uma versão adaptada com algumas tecnologias / bibliotecas mais atuais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
+- React
+- Typescript
+- TailwindCSS
+- Lucide Icons
+- React Hook Form
+- React Router
+- Zod
+- Shadcn/UI
 
-## Expanding the ESLint configuration
+## Ferramentas e métodos Utilizadas
+- VS Code
+- Figma
+- Commit atômico / por funcionalidade
+- Pattern de commit da Conventional Commits (Commits semânticos)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Funcionalidades
+- Contador
+- Histórico
+- Roteamento da página
+- Responsividade
+- Tema Dark / Light
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Siga estas etapas para configurar o Ignite Timer localmente:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone o repositório: `git clone https://github.com/LFeli/Ignite-Timer.git .`
+2. Instale as dependências: `npm install`
+3. Inicie o aplicativo: `npm run dev`
+
+## Como Usar
+
+1. Ao acessar a aplicação, você verá a tela do contador.
+2. Crie uma nova tarefa, especificando o projeto e a duração desejada (entre 5 e 60 minutos).
+3. Inicie o ciclo e concentre-se na tarefa.
+4. Ao término do ciclo, a tarefa será marcada como concluída.
+5. Visualize o histórico para revisar tarefas passadas.
+
+## Personalização
+
+Escolha entre o tema Dark ou Light Clicando no ícone de lua e alterando entre tema Dark ou Light.
+
+## Demonstração
+
+Abaixo uma previa de como é o projeto:
+
+![Ignite Timer Screenshot](github/demo.jpg)
