@@ -13,6 +13,7 @@ O projeto inicialmente feito com algumas certas tecnologias, porém está e uma 
 - React Router
 - Zod
 - Shadcn/UI
+- Immer
 
 ## Ferramentas e métodos Utilizadas
 - VS Code
@@ -26,6 +27,7 @@ O projeto inicialmente feito com algumas certas tecnologias, porém está e uma 
 - Roteamento da página
 - Responsividade
 - Tema Dark / Light
+- Salvar / Recuperar os dados via LocalStorage
 
 ## Instalação
 
